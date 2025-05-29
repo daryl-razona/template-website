@@ -1,35 +1,10 @@
 import type { StrapiApp } from '@strapi/strapi/admin';
+import ja from './translations/ja.json';
 
 export default {
   config: {
-    locales: [
-      // 'ar',
-      // 'fr',
-      // 'cs',
-      // 'de',
-      // 'dk',
-      // 'es',
-      // 'he',
-      // 'id',
-      // 'it',
-      // 'ja',
-      // 'ko',
-      // 'ms',
-      // 'nl',
-      // 'no',
-      // 'pl',
-      // 'pt-BR',
-      // 'pt',
-      // 'ru',
-      // 'sk',
-      // 'sv',
-      // 'th',
-      // 'tr',
-      // 'uk',
-      // 'vi',
-      // 'zh-Hans',
-      // 'zh',
-    ],
+    locales: ['en', 'ja'],
+    translations: { ja },
   },
   bootstrap(app: StrapiApp) {
     console.log(app);
