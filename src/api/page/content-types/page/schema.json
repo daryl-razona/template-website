@@ -4,7 +4,7 @@
   "info": {
     "singularName": "page",
     "pluralName": "pages",
-    "displayName": "Page",
+    "displayName": "Pages",
     "name": "page"
   },
   "options": {
@@ -16,38 +16,8 @@
     }
   },
   "attributes": {
-    "shortName": {
+    "title": {
       "type": "string",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "metadata": {
-      "type": "component",
-      "repeatable": false,
-      "component": "meta.metadata",
-      "required": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "contentSections": {
-      "type": "dynamiczone",
-      "components": [
-        "sections.hero",
-        "sections.bottom-actions",
-        "sections.feature-columns-group",
-        "sections.feature-rows-group",
-        "sections.testimonials-group",
-        "sections.large-video",
-        "sections.rich-text",
-        "sections.pricing",
-        "sections.lead-form"
-      ],
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -55,13 +25,25 @@
       }
     },
     "slug": {
+      "type": "uid",
+      "default": "slug",
+      "required": true,
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
-      "type": "string",
       "regex": "^$|^[a-zA-Z/-]+$"
+    },
+    "dynamic_zone": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+      ]
     }
   }
 }
